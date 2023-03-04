@@ -44,9 +44,11 @@ public class hw03 {
     }
 
     public static String input(String text) {
+        String result = "";
         Scanner iScan = new Scanner(System.in);
-        System.out.println(text);
-        String result = iScan.nextLine();
+        System.out.print(text);
+        result = iScan.nextLine();
+        // iScan.close();
         return result;
     }
 }
