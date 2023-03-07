@@ -62,6 +62,7 @@ public class hw01 {
                 log.warning("Some thing wrong after parse with users inputs:" + temparr[i]);
             }
         }
+        iscan.close();
         return res;
     }
 
