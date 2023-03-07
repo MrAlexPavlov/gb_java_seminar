@@ -15,7 +15,7 @@ public class task01 {
     public static String concatN(char a, char b, int cnt) {
         StringBuilder res = new StringBuilder();
         for (int i = 0; i < cnt; i++) {
-            res.append(i % 2 == 0 ? a : b) ;
+            res.append(i % 2 == 0 ? a : b);
         }
         return res.toString();
     }
