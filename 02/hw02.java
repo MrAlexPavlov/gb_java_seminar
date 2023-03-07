@@ -1,7 +1,6 @@
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -23,11 +22,11 @@ public class hw02 {
     public static String file_name = "./info.txt";
 
     public static void main(String[] args) {
-        init();
-        print(fileDictReader());
+        init();// создадим файл с данными если его нет
+        print(fileDictReader()); // Получаем и выводим данные в том формате который нам необходим
 
     }
-
+    // Создаем файл и наполняем содержимым если его нет.
     public static boolean creatFile(String filename, String text) {
         try {
             File f = new File(filename);
@@ -35,14 +34,14 @@ public class hw02 {
                 FileWriter fw = new FileWriter(f, true);
                 fw.write(text);
                 fw.close();
-                return false;
+                return true;
             }
             return true;
         } catch (Exception e) {
             return false;
         }
     }
-
+    // Данные для файла и вызов метода для его создания
     public static void init() {
         StringBuilder text_for_file = new StringBuilder();
         text_for_file.append("\"фамилия\":\"Иванов\",\"оценка\":\"5\",\"предмет\":\"Математика\"\n");
@@ -50,7 +49,7 @@ public class hw02 {
         text_for_file.append("\"фамилия\":\"Краснов\",\"оценка\":\"5\",\"предмет\":\"Физика\"\n");
         creatFile(file_name, text_for_file.toString());
     }
-
+    // Метод чтения и преобразования строк из файла. Построчно.
     public static String fileDictReader() {
         StringBuilder res = new StringBuilder();
         String line;
@@ -58,6 +57,7 @@ public class hw02 {
             FileReader fr = new FileReader(file_name);
             Scanner fscan = new Scanner(fr);
             while (fscan.hasNextLine()) {
+                // Читаем строку и переформатируем его под необходимый формат
                 line = fscan.nextLine();
                 res.append(newFormat(line));
             }
@@ -68,7 +68,7 @@ public class hw02 {
         }
         return res.toString();
     }
-
+    // Метод для преобразования текста в файле в необходимый по задаче формат
     public static String newFormat(String msg) {
         String[] tmp = new String[2];
         String surname, point, science;
@@ -78,7 +78,7 @@ public class hw02 {
         science = tmp[2].split(":")[1];
         return String.format("Студент %s получил %s по предмету %s.\n", surname, point, science);
     }
-
+    // надоело много писать для вывода в консоль
     public static void print(String msg) {
         System.out.println(msg);
     }
