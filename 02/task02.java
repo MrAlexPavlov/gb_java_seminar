@@ -27,7 +27,7 @@ public class task02 {
         int cnt = 1;
         res.append(N.charAt(0));
         char tmp = N.charAt(0);
-        for (int i = 1; i<N.length(); i++){
+        for (int i = 1; i < N.length(); i++){
             if (N.charAt(i) != tmp){
                 if (cnt > 1) {
                     res.append(cnt);
