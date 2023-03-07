@@ -19,6 +19,7 @@ public class task03 {
         Scanner iscanner = new Scanner(System.in);
         System.out.println(text);
         res = iscanner.nextLine();
+        iscanner.close();
         return res;
     }
 
