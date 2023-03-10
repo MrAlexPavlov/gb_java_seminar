@@ -34,7 +34,7 @@ public class hw03 {
 
     public static Logger initLog() throws SecurityException, IOException{
         Logger loger = Logger.getLogger(hw03.class.getName());
-        FileHandler fch = new FileHandler(log_file);
+        FileHandler fch = new FileHandler(log_file, true); //true - для добавления в концец файла, без него будет перезаписывать.
         loger.addHandler(fch);
         SimpleFormatter sformat = new SimpleFormatter();
         fch.setFormatter(sformat);
