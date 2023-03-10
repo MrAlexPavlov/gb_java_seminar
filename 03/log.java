@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.logging.*;
 /**
  * log
@@ -5,7 +6,7 @@ import java.util.logging.*;
 public class log {
     public static String log_file = "./log.txt";
     public static void main(String[] args) {
-        
+        System.out.println("start");
     }
     
     public static Logger initLog() throws SecurityException, IOException{
