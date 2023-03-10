@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Random;
 
 /**
@@ -9,7 +10,7 @@ public class task01 {
     public static void main(String[] args) {
         ArrayList<Integer> randomList = creatRandomArrList(1,100, 10);
         System.out.println(randomList.toString());
-        randomList.sort(null);
+        randomList.sort(Comparator.naturalOrder());
         System.out.println(randomList.toString());
     }
     
