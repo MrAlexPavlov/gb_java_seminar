@@ -8,6 +8,7 @@ import java.util.Scanner;
  * Ввод числа ->
  */
 public class hw03 {
+    public static Scanner iScan = new Scanner(System.in);
 
     public static void main(String[] args) {
         float a = Float.parseFloat( input("Ввод числа `a`: ") );
@@ -44,11 +45,7 @@ public class hw03 {
     }
 
     public static String input(String text) {
-        String result = "";
-        Scanner iScan = new Scanner(System.in);
         System.out.print(text);
-        result = iScan.nextLine();
-        // iScan.close();
-        return result;
+        return iScan.nextLine();
     }
 }
