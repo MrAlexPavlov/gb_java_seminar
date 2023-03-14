@@ -23,6 +23,7 @@ print~1
 
  */
 public class task02 {
+    private static Scanner scan = new Scanner(System.in);
     public static void main(String[] args) {
         ArrayList<String> arr_list = new ArrayList<String>();
         String users_text = stringFromUser(":");
@@ -44,7 +45,6 @@ public class task02 {
     }
 
     public static String stringFromUser(String text) {
-        Scanner scan = new Scanner(System.in);
         System.out.println(text);
         return scan.nextLine();
     }
