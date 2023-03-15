@@ -146,7 +146,7 @@ public class hw03 {
             if (first_negative) arr[0] = "-" + arr[0];
             // удаляем все цифры, что бы получить итоговую арифмитическую операцию.
             arr[2] = str.replaceAll("([0-9.]*)", "");
-            print("arr = " + Arrays.toString(arr));
+            // print("arr = " + Arrays.toString(arr));
         } catch (Exception e) {
             loger.log(Level.WARNING, "Parsing error! : " + str);
         }
