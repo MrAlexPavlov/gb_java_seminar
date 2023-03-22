@@ -2,7 +2,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Laptop {
